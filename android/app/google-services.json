@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "576923095543",
+    "project_id": "phanthanhtai-eacdd",
+    "storage_bucket": "phanthanhtai-eacdd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576923095543:android:f2eff238a1cce38a5e9ef2",
+        "android_client_info": {
+          "package_name": "com.duymai.cipher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576923095543-q7qp08g51kh19feuroa6n6qa2tcs78aa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJVzgJvPUbgeNUQeioZ10neRS8zpmH380"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576923095543-q7qp08g51kh19feuroa6n6qa2tcs78aa.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "576923095543-7hleam77pe8apht9fqv1qbie1pg7vcqn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "jp.co.tokai-rika.rental-car.prt"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
