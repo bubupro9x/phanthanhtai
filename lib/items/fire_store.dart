@@ -123,6 +123,42 @@ class FireStore {
       _user.tokens -= tokensNeed;
       await firestore.collection('users').doc(getUid).set(_user.toJson());
     }
+
+    if (level == 2) {
+      if (_user.currentHintLevel2 == 3) return;
+
+      _user.currentHintLevel2++;
+      await firestore.collection('users').doc(getUid).set(_user.toJson());
+      _user.tokens -= tokensNeed;
+      await firestore.collection('users').doc(getUid).set(_user.toJson());
+    }
+
+    if (level == 3) {
+      if (_user.currentHintLevel3 == 3) return;
+
+      _user.currentHintLevel3++;
+      await firestore.collection('users').doc(getUid).set(_user.toJson());
+      _user.tokens -= tokensNeed;
+      await firestore.collection('users').doc(getUid).set(_user.toJson());
+    }
+
+    if (level == 4) {
+      if (_user.currentHintLevel4 == 3) return;
+
+      _user.currentHintLevel4++;
+      await firestore.collection('users').doc(getUid).set(_user.toJson());
+      _user.tokens -= tokensNeed;
+      await firestore.collection('users').doc(getUid).set(_user.toJson());
+    }
+
+    if (level == 5) {
+      if (_user.currentHintLevel5 == 3) return;
+
+      _user.currentHintLevel5++;
+      await firestore.collection('users').doc(getUid).set(_user.toJson());
+      _user.tokens -= tokensNeed;
+      await firestore.collection('users').doc(getUid).set(_user.toJson());
+    }
   }
 
   Future<void> getAllUsers() async {

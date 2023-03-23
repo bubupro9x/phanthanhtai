@@ -21,7 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 50),
       decoration: const BoxDecoration(
         image: DecorationImage(
-          fit: BoxFit.cover,
+            fit: BoxFit.cover,
             image: NetworkImage(
                 'https://media.discordapp.net/attachments/1008571191935639652/1086550580631179284/duymai_storehouse_with_number_12_5b448ff4-8217-4152-aa12-ffdbae6c582a.png?width=1498&height=1498')),
         gradient: LinearGradient(
@@ -91,4 +91,17 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 }
 
-List<String> uidValid = ['PTT01X', 'duymai', 'PTT02X'];
+List<String> uidValid = [
+  'PTT01X',
+  'duymai',
+  'PTT02X',
+  'PTT03X',
+  'PTT04X',
+  'PTT05X',
+  'PTT06X',
+  'PTT07X',
+  'PTT08X',
+  'PTT09X',
+  'PTT10X',
+  'PTT11X',
+];

@@ -66,14 +66,56 @@ class _DetailState extends State<Detail> {
                             showDialog(
                               context: context,
                               builder: (BuildContext context) {
-                                int tokensNeed =
-                                    user.data?.currentHintLevel1 == 0
-                                        ? 5
-                                        : user.data?.currentHintLevel1 == 1
-                                            ? 10
-                                            : user.data?.currentHintLevel1 == 2
-                                                ? 15
-                                                : 9999;
+                                int tokensNeed = 999;
+                                print('widget.task.level: ${widget.task.level}');
+                                if (widget.task.level == 1) {
+                                  tokensNeed= user.data?.currentHintLevel1 == 0
+                                      ? 5
+                                      : user.data?.currentHintLevel1 == 1
+                                          ? 10
+                                          : user.data?.currentHintLevel1 == 2
+                                              ? 15
+                                              : 9999;
+                                }
+
+                                if (widget.task.level == 2) {
+                                  tokensNeed = user.data?.currentHintLevel2 == 0
+                                      ? 5
+                                      : user.data?.currentHintLevel2 == 1
+                                          ? 10
+                                          : user.data?.currentHintLevel2 == 2
+                                              ? 15
+                                              : 9999;
+                                }
+
+                                if (widget.task.level == 3) {
+                                  tokensNeed =  user.data?.currentHintLevel3 == 0
+                                      ? 5
+                                      : user.data?.currentHintLevel3 == 1
+                                          ? 10
+                                          : user.data?.currentHintLevel3 == 2
+                                              ? 15
+                                              : 9999;
+                                }
+                                print('user.data?.currentHintLevel4: ${user.data?.currentHintLevel4}');
+                                if (widget.task.level == 4) {
+                                  tokensNeed = user.data?.currentHintLevel4 == 0
+                                      ? 5
+                                      : user.data?.currentHintLevel4 == 1
+                                          ? 10
+                                          : user.data?.currentHintLevel4 == 2
+                                              ? 15
+                                              : 9999;
+                                }
+                                if (widget.task.level == 5) {
+                                  tokensNeed = user.data?.currentHintLevel5 == 0
+                                      ? 10
+                                      : user.data?.currentHintLevel5 == 1
+                                          ? 15
+                                          : user.data?.currentHintLevel5 == 2
+                                              ? 20
+                                              : 9999;
+                                }
                                 return AlertDialog(
                                   title: const Text('Thông báo'),
                                   content: Text(
@@ -170,25 +212,32 @@ class _DetailState extends State<Detail> {
                   ),
                 ),
               ),
-              Text(
-                widget.task.ott,
-                textAlign: TextAlign.center,
-                style: GoogleFonts.getFont('Roboto',
-                    color: Palette.extra,
-                    fontSize: 27,
-                    fontWeight: FontWeight.w900),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Text(
+                  widget.task.ott,
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.getFont('Roboto',
+                      color: Palette.extra,
+                      fontSize: 27,
+                      fontWeight: FontWeight.w900),
+                ),
               ),
               const SizedBox(
                 height: 16,
               ),
-              Text(
-                widget.task.bv,
-                textAlign: TextAlign.center,
-                style: GoogleFonts.getFont('Montserrat',
-                    color: Colors.grey,
-                    fontSize: 14,
-                    letterSpacing: 2,
-                    fontWeight: FontWeight.w600),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+
+                child: Text(
+                  widget.task.bv,
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.getFont('Montserrat',
+                      color: Colors.grey,
+                      fontSize: 14,
+                      letterSpacing: 2,
+                      fontWeight: FontWeight.w600),
+                ),
               ),
               const SizedBox(
                 height: 40,
@@ -316,17 +365,37 @@ class _DetailState extends State<Detail> {
                           child: ListView.separated(
                             physics: const NeverScrollableScrollPhysics(),
                             itemBuilder: (_, index) {
-                              if (snapshot.data!.currentHintLevel1 <= index) {
+                              print('widget.task: ${widget.task}');
+                              if (widget.task.level == 1 &&
+                                  snapshot.data!.currentHintLevel1 <= index) {
                                 return const SizedBox();
                               }
+                              if (widget.task.level == 2 &&
+                                  snapshot.data!.currentHintLevel2 <= index) {
+                                return const SizedBox();
+                              }
+                              if (widget.task.level == 3 &&
+                                  snapshot.data!.currentHintLevel3 <= index) {
+                                return const SizedBox();
+                              }
+                              if (widget.task.level == 4 &&
+                                  snapshot.data!.currentHintLevel4 <= index) {
+                                return const SizedBox();
+                              }
+                              if (widget.task.level == 5 &&
+                                  snapshot.data!.currentHintLevel5 <= index) {
+                                return const SizedBox();
+                              }
+                              String hint = '';
+                              hint = index == 0
+                                  ? 'Gợi ý 1: ${widget.task.hint1}'
+                                  : index == 1
+                                      ? 'Gợi ý 2: ${widget.task.hint2}'
+                                      : 'Gợi ý 3: ${widget.task.hint3}';
                               return Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  index == 0
-                                      ? 'Gợi ý 1: ${widget.task.hint1}'
-                                      : index == 1
-                                          ? 'Gợi ý 2: ${widget.task.hint2}'
-                                          : 'Gợi ý 3: ${widget.task.hint3}',
+                                  hint,
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.getFont('Montserrat',
                                       color: Colors.grey,

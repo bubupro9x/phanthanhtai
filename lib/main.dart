@@ -18,7 +18,7 @@ void main() async {
 
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: MTO3(),
+    home: FireStore().getUid != null ? MyApp() : LoginScreen(),
   ));
 }
 

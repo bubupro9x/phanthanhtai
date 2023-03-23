@@ -46,4 +46,4 @@ class Palette {
 
 bool get isAdmin => FireStore().getUid == 'duymai';
 
-Duration timeSolve = const Duration(minutes: 1);
+Duration timeSolve = const Duration(minutes: 10);

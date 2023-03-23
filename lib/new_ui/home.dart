@@ -296,7 +296,6 @@ class _HomeState extends State<Home> {
                                       builder: (context) =>
                                           const ScanQrCodeView()));
                               if (result != null) {
-
                                 FireStore().scanQRCode(
                                     id: result, tokens: 0, coins: 200);
                               }
@@ -311,7 +310,7 @@ class _HomeState extends State<Home> {
                                           const ScanQrCodeView()));
                               if (result != null) {
                                 FireStore().scanQRCode(
-                                    id: result, tokens: 0, coins: 80);
+                                    id: result, tokens: 0, coins: 160);
                               }
                             },
                             child: const Text('Nhì mật thư')),
@@ -324,7 +323,7 @@ class _HomeState extends State<Home> {
                                           const ScanQrCodeView()));
                               if (result != null) {
                                 FireStore().scanQRCode(
-                                    id: result, tokens: 0, coins: 70);
+                                    id: result, tokens: 0, coins: 140);
                               }
                             },
                             child: const Text('Ba mật thư')),
@@ -337,7 +336,7 @@ class _HomeState extends State<Home> {
                                           const ScanQrCodeView()));
                               if (result != null) {
                                 FireStore().scanQRCode(
-                                    id: result, tokens: 0, coins: 60);
+                                    id: result, tokens: 0, coins: 120);
                               }
                             },
                             child: const Text('Tư mật thư')),
@@ -350,7 +349,7 @@ class _HomeState extends State<Home> {
                                           const ScanQrCodeView()));
                               if (result != null) {
                                 FireStore().scanQRCode(
-                                    id: result, tokens: 0, coins: 40);
+                                    id: result, tokens: 0, coins: 80);
                               }
                             },
                             child: const Text('Còn lại mật thư')),
@@ -362,8 +361,8 @@ class _HomeState extends State<Home> {
                                     builder: (context) =>
                                         const ScanQrCodeView()));
                             if (result != null) {
-                              FireStore()
-                                  .scanQRCode(id: result, tokens: 0, coins: 50);
+                              FireStore().scanQRCode(
+                                  id: result, tokens: 0, coins: 100);
                             }
                           },
                           style: ElevatedButton.styleFrom(
@@ -385,7 +384,7 @@ class _HomeState extends State<Home> {
                                         const ScanQrCodeView()));
                             if (result != null) {
                               FireStore()
-                                  .scanQRCode(id: result, tokens: 0, coins: 40);
+                                  .scanQRCode(id: result, tokens: 0, coins: 80);
                             }
                           },
                           style: ElevatedButton.styleFrom(
@@ -407,7 +406,7 @@ class _HomeState extends State<Home> {
                                         const ScanQrCodeView()));
                             if (result != null) {
                               FireStore()
-                                  .scanQRCode(id: result, tokens: 0, coins: 35);
+                                  .scanQRCode(id: result, tokens: 0, coins: 70);
                             }
                           },
                           style: ElevatedButton.styleFrom(
@@ -429,7 +428,7 @@ class _HomeState extends State<Home> {
                                         const ScanQrCodeView()));
                             if (result != null) {
                               FireStore()
-                                  .scanQRCode(id: result, tokens: 0, coins: 30);
+                                  .scanQRCode(id: result, tokens: 0, coins: 60);
                             }
                           },
                           style: ElevatedButton.styleFrom(
@@ -451,7 +450,7 @@ class _HomeState extends State<Home> {
                                         const ScanQrCodeView()));
                             if (result != null) {
                               FireStore()
-                                  .scanQRCode(id: result, tokens: 0, coins: 20);
+                                  .scanQRCode(id: result, tokens: 0, coins: 40);
                             }
                           },
                           style: ElevatedButton.styleFrom(
@@ -473,7 +472,7 @@ class _HomeState extends State<Home> {
                                         const ScanQrCodeView()));
                             if (result != null) {
                               FireStore().scanQRCode(
-                                  id: result, tokens: 15, coins: 50);
+                                  id: result, tokens: 10, coins: 0);
                             }
                           },
                           style: ElevatedButton.styleFrom(
@@ -484,7 +483,7 @@ class _HomeState extends State<Home> {
                                 width: 1.0,
                                 color: Colors.transparent,
                               )),
-                          child: const Text('Nhất TCN'),
+                          child: const Text('Thắng TCN'),
                         ),
                         ElevatedButton(
                           onPressed: () async {
@@ -495,7 +494,7 @@ class _HomeState extends State<Home> {
                                         const ScanQrCodeView()));
                             if (result != null) {
                               FireStore().scanQRCode(
-                                  id: result, tokens: 13, coins: 40);
+                                  id: result, tokens: 7, coins: 0);
                             }
                           },
                           style: ElevatedButton.styleFrom(
@@ -506,73 +505,7 @@ class _HomeState extends State<Home> {
                                 width: 1.0,
                                 color: Colors.transparent,
                               )),
-                          child: const Text('Nhì TCN'),
-                        ),
-                        ElevatedButton(
-                          onPressed: () async {
-                            final result = await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const ScanQrCodeView()));
-                            if (result != null) {
-                              FireStore().scanQRCode(
-                                  id: result, tokens: 11, coins: 35);
-                            }
-                          },
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blue,
-                              foregroundColor: Colors.black,
-                              elevation: 0,
-                              side: const BorderSide(
-                                width: 1.0,
-                                color: Colors.transparent,
-                              )),
-                          child: const Text('Ba TCN'),
-                        ),
-                        ElevatedButton(
-                          onPressed: () async {
-                            final result = await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const ScanQrCodeView()));
-                            if (result != null) {
-                              FireStore()
-                                  .scanQRCode(id: result, tokens: 9, coins: 30);
-                            }
-                          },
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blue,
-                              foregroundColor: Colors.black,
-                              elevation: 0,
-                              side: const BorderSide(
-                                width: 1.0,
-                                color: Colors.transparent,
-                              )),
-                          child: const Text('Tư TCN'),
-                        ),
-                        ElevatedButton(
-                          onPressed: () async {
-                            final result = await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const ScanQrCodeView()));
-                            if (result != null) {
-                              FireStore()
-                                  .scanQRCode(id: result, tokens: 7, coins: 20);
-                            }
-                          },
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blue,
-                              foregroundColor: Colors.black,
-                              elevation: 0,
-                              side: const BorderSide(
-                                width: 1.0,
-                                color: Colors.transparent,
-                              )),
-                          child: const Text('Còn lại TCN'),
+                          child: const Text('Thua TCN'),
                         ),
                       ],
                     ),
